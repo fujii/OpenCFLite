@@ -33,7 +33,7 @@
 /*
 	File:		TargetConditionals.h
 
-	Copyright:	© 2002-2005 by Apple Computer, Inc., all rights reserved.
+	Copyright:	Â© 2002-2005 by Apple Computer, Inc., all rights reserved.
 
 	Simple redirect header to ConditionalMacros.h for use on Windows.
 */

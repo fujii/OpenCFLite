@@ -5,7 +5,7 @@
  
      Version:    QuickTime 7.1
  
-     Copyright:  © 1993-2006 by Apple Computer, Inc., all rights reserved
+     Copyright:  Â© 1993-2006 by Apple Computer, Inc., all rights reserved
  
      Bugs?:      For bug reports, consult the following page on
                  the World Wide Web:
@@ -36,7 +36,7 @@
 
 /****************************************************************************************************
 
-    TARGET_CPU_Å    
+    TARGET_CPU_Ã…    
     These conditionals specify which microprocessor instruction set is being
     generated.  At most one of these is true, the rest are false.
 
@@ -48,7 +48,7 @@
         TARGET_CPU_ALPHA        - Compiler is generating Dec Alpha instructions
 
 
-    TARGET_OS_Å 
+    TARGET_OS_Ã… 
     These conditionals specify in which Operating System the generated code will
     run. At most one of the these is true, the rest are false.
 
@@ -57,7 +57,7 @@
         TARGET_OS_UNIX          - Generate code will run under some unix 
 
 
-    TARGET_RT_Å 
+    TARGET_RT_Ã… 
     These conditionals specify in which runtime the generated code will
     run. This is needed when the OS and CPU support more than one runtime
     (e.g. MacOS on 68K supports CFM68K and Classic 68k).
@@ -69,12 +69,12 @@
         TARGET_RT_MAC_68881     - TARGET_OS_MAC is true and 68881 floating point instructions used  
 
 
-    TARGET__API_Å_Å 
+    TARGET__API_Ã…_Ã… 
     These conditionals are used to differentiate between sets of API's on the same
     processor under the same OS.  The first section after _API_ is the OS.  The
     second section is the API set.  Unlike TARGET_OS_ and TARGET_CPU_, these
     conditionals are not mutally exclusive. This file will attempt to auto-configure
-    all TARGET_API_Å_Å values, but will often need a TARGET_API_Å_Å value predefined
+    all TARGET_API_Ã…_Ã… values, but will often need a TARGET_API_Ã…_Ã… value predefined
     in order to disambiguate.
     
         TARGET_API_MAC_OS8      - Code is being compiled to run on System 7 through Mac OS 8.x
@@ -82,7 +82,7 @@
         TARGET_API_MAC_OSX      - Code is being compiled to run on Mac OS X
 
 
-    PRAGMA_Å
+    PRAGMA_Ã…
     These conditionals specify whether the compiler supports particular #pragma's
     
         PRAGMA_IMPORT           - Compiler supports: #pragma import on/off/reset
@@ -102,7 +102,7 @@
         FOUR_CHAR_CODE('abcd')  - Convert a four-char-code to the correct 32-bit value
 
 
-    TYPE_Å
+    TYPE_Ã…
     These conditionals specify whether the compiler supports particular types.
 
         TYPE_LONGLONG               - Compiler supports "long long" 64-bit integers
@@ -111,7 +111,7 @@
         TYPE_LONGDOUBLE_IS_DOUBLE   - Compiler implements "long double" same as "double"
 
 
-    FUNCTION_Å
+    FUNCTION_Ã…
     These conditionals specify whether the compiler supports particular language extensions
     to function prototypes and definitions.
 
@@ -214,7 +214,7 @@
  #if TARGET_RT_MAC_CFM 
      #define PRAGMA_IMPORT           1
       #if (__SC__ <= 0x0810)
-         /* old versions of SC don't support Ò#pragma import resetÓ */
+         /* old versions of SC don't support Ã’#pragma import resetÃ“ */
           #define PRAGMA_IMPORT_OFF   1
       #endif
  #else
@@ -1544,7 +1544,7 @@
     Headers and implementation files can use the following macros to make their
     source more portable by hiding the calling convention details:
 
-    EXTERN_APIÅ 
+    EXTERN_APIÃ… 
     These macros are used to specify the calling convention on a function prototype.
 
         EXTERN_API              - Classic 68k: pascal, Win32: __cdecl
@@ -1553,7 +1553,7 @@
         EXTERN_API_C_STDCALL    - Classic 68k: C,      Win32: __stdcall
 
 
-    DEFINE_APIÅ 
+    DEFINE_APIÃ… 
     These macros are used to specify the calling convention on a function definition.
 
         DEFINE_API              - Classic 68k: pascal, Win32: __cdecl
@@ -1562,7 +1562,7 @@
         DEFINE_API_C_STDCALL    - Classic 68k: C,      Win32: __stdcall
 
 
-    CALLBACK_APIÅ   
+    CALLBACK_APIÃ…   
     These macros are used to specify the calling convention of a function pointer.
 
         CALLBACK_API            - Classic 68k: pascal, Win32: __stdcall
@@ -1687,7 +1687,7 @@
 #endif
 /****************************************************************************************************
     
-    Set up TARGET_API_Å_Å values
+    Set up TARGET_API_Ã…_Ã… values
 
 ****************************************************************************************************/
 #if TARGET_OS_MAC
