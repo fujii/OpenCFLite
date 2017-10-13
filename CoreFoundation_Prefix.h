@@ -46,6 +46,7 @@
 #include <stdlib.h>
 #include <stdint.h>
 #include <string.h>
+#include <cstdint>
 
 #if DEPLOYMENT_TARGET_WINDOWS && defined(__cplusplus)
 extern "C" {
