@@ -1099,15 +1099,17 @@ void __CFInitialize(void) {
 #endif
 
         {
+#if DEPLOYMENT_TARGET_MACOSX || DEPLOYMENT_TARGET_EMBEDDED || DEPLOYMENT_TARGET_EMBEDDED_MINI
             CFIndex idx, cnt;
             char **args;
-#if DEPLOYMENT_TARGET_MACOSX || DEPLOYMENT_TARGET_EMBEDDED || DEPLOYMENT_TARGET_EMBEDDED_MINI
             args = *_NSGetArgv();
             cnt = *_NSGetArgc();
 #elif DEPLOYMENT_TARGET_WINDOWS
+            int idx, cnt;
+            wchar_t **args;
             wchar_t *commandLine = GetCommandLineW();
             // result is actually pointer to wchar_t *, make sure to account for that below
-            args = (char **)CommandLineToArgvW(commandLine, (int *)&cnt);
+            args = CommandLineToArgvW(commandLine, (int *)&cnt);
 #endif
             CFIndex count;
             CFStringRef *list, buffer[256];
