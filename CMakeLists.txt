@@ -9,7 +9,7 @@ find_package(ICU REQUIRED COMPONENTS data i18n uc)
 include(FindPackageHandleStandardArgs)
 find_path(PTHREAD_W32_INCLUDE_DIRS pthread.h)
 find_library(PTHREAD_W32_LIBRARIES pthreadsVC2)
-find_package_handle_standard_args(PTHREAD_W32 DEFAULT_MSG PTHREAD_W32_INCLUDE_DIR PTHREAD_W32_LIBRARY)
+find_package_handle_standard_args(PTHREAD_W32 DEFAULT_MSG PTHREAD_W32_INCLUDE_DIRS PTHREAD_W32_LIBRARIES)
 
 add_definitions(-DUNICODE -D_UNICODE)
 
